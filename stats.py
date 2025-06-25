@@ -25,6 +25,6 @@ def sorted_count():
                 my_dict[i.lower()] += 1
             else:
                 my_dict[i.lower()] = 1
-    sorted_dict = dict(sorted(my_dict.items(),reverse=True, key=lambda item:item[1]))
-    for k, v in sorted_dict.items():
+    sorted_dict = sorted(my_dict.items(),reverse=True, key=lambda x:x[1])
+    for k, v in sorted_dict:
         print(f"{k}: {v}")
