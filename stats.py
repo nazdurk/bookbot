@@ -28,3 +28,8 @@ def sorted_count():
     sorted_dict = sorted(my_dict.items(),reverse=True, key=lambda x:x[1])
     for k, v in sorted_dict:
         print(f"{k}: {v}")
+
+def get_book_text():
+    with open("books/frankenstein.txt") as f:
+        book_contents = f.read()
+        print(book_contents)
