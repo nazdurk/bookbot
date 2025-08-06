@@ -1,11 +1,12 @@
+import sys
 def get_num_words():
-    with open("books/frankenstein.txt") as my_file:
+    with open(sys.argv[1]) as my_file:
         data = my_file.read()
         num_words = len(data.split())
     return num_words
 
 def get_dict():
-    with open("books/frankenstein.txt") as my_file:
+    with open(sys.argv[1]) as my_file:
         data = my_file.read()
     my_dict = {}
     for i in data:
@@ -16,7 +17,7 @@ def get_dict():
     return my_dict
 
 def sorted_count():
-    with open("books/frankenstein.txt") as my_file:
+    with open(sys.argv[1]) as my_file:
         data = my_file.read()
     my_dict = {}
     for i in data:
@@ -32,6 +33,6 @@ def sorted_count():
     return new_list
 
 def get_book_text():
-    with open("books/frankenstein.txt") as f:
+    with open(sys.argv[1]) as f:
         book_contents = f.read()
         print(book_contents)
